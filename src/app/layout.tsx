@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ParticlesBackground />
         <Navbar />
 
-        <div className="pt-24">
+        <div className="pt-24 px-4">
           {children}
         </div>
         
