@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Reset navbar list styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+/* ===== Base ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top, #111, #000);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* remove default blue */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Particles BG ===== */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  height:100vh;
+  z-index: -1;
+}
+
+/* ===== Sections ===== */
+
+section {
+  scroll-margin-top: 90px;
+  padding-top: 6rem;
+}
+
+.section-wrapper {
+  width: 100%;
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+}
+
+/* ===== Headings ===== */
+
+.section-heading {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-align:center;
+  margin-bottom: 2.7rem;
+  letter-spacing: .03em;
+}
+
+/* ===== Hero ===== */
+
+.hero-wrapper {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:2rem;
+}
+
+.hero-title {
+  font-size:4.4rem;
+  font-weight:800;
+  margin-bottom:0.7rem;
+  color:white;
+}
+
+.hero-sub {
+  color:rgb(216,180,254); /* purple */
+  font-size:1.1rem;
+}
+
+.hero-desc {
+  color:rgb(200,200,200);
+  margin-top:0.8rem;
+  max-width:34rem;
+  line-height:1.6;
+  opacity:0.92;
+}
+
+.hero-btn {
+  margin-top:2rem;
+  display:inline-block;
+  font-weight:500;
+  color:rgb(216,180,254);
+  border-bottom:1px solid transparent;
+  padding-bottom:2px;
+  transition:.25s;
+}
+
+.hero-btn:hover {
+  border-color:rgb(216,180,254);
+}
+
+/* ===== Glow Animation ===== */
+
+@keyframes glow {
+  0% {text-shadow:0 0 5px rgba(216,180,254,.4);}
+  50%{text-shadow:0 0 14px rgba(216,180,254,.9);}
+  100%{text-shadow:0 0 5px rgba(216,180,254,.4);}
+}
+
+.animate-glow {
+  animation:glow 3s infinite ease-in-out;
+}
+
+/* ===== ABOUT ===== */
+
+.glass {
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(216,180,254,0.15);
+  border-radius:1rem;
+  backdrop-filter:blur(12px);
+  box-shadow:0 22px 38px rgba(0,0,0,0.65);
+}
+
+/* text block */
+
+.section-text {
+  max-width:48rem;
+  margin:0 auto;
+  font-size:1.06rem;
+  color:rgb(210,210,210);
+  line-height:1.7;
+}
+
+.section-text p+p {
+  margin-top:1.1rem;
+}
+
+.highlight {
+  color:rgb(216,180,254);
+  font-weight:600;
+}
+
+/* ===== SKILLS ===== */
+
+.skills-grid {
+  display:flex;
+  flex-direction:column;
+  gap:2.6rem;
+  align-items:center;
+}
+
+.skill-title {
+  color:rgb(216,180,254);
+  font-size:1.08rem;
+  font-weight:600;
+  margin-bottom:.6rem;
+  text-align:center;
+}
+
+.skill-list {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+}
+
+/* pills */
+.skill-pill {
+  padding:6px 14px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(216,180,254,0.18);
+  border-radius:999px;
+  font-size:.85rem;
+  color:#eee;
+  transition:.25s;
+}
+
+.skill-pill:hover {
+  background:rgba(216,180,254,0.22);
+  border-color:rgba(216,180,254,0.6);
+  transform:translateY(-1px);
+}
+
+/* ===== PROJECTS ===== */
+
+.project-list {
+  display:grid;
+  gap:1.6rem;
+  max-width:45rem;
+  margin:0 auto;
+}
+
+.project-card {
+  border:1px solid rgba(216,180,254,0.18);
+  border-radius:.9rem;
+  padding:1.25rem 1.5rem;
+  background:rgba(15,15,30,0.6);
+  backdrop-filter:blur(12px);
+  box-shadow:0 12px 35px rgba(0,0,0,.65);
+  transition:.25s;
+}
+
+.project-card:hover {
+  transform:translateY(-3px);
+  border-color:rgba(216,180,254,0.8);
+  box-shadow:0 18px 45px rgba(0,0,0,.8);
+}
+
+.project-card a {
+  color:rgb(216,180,254);
+  display:inline-block;
+  margin-top:.4rem;
+  border-bottom:1px solid transparent;
+  transition:.25s;
+}
+
+.project-card a:hover {
+  border-color:rgb(216,180,254);
+}
+
+/* ===== CONTACT ===== */
+
+.contact-card {
+  background:rgba(10,10,22,0.65);
+  border:1px solid rgba(216,180,254,.22);
+  border-radius:.9rem;
+  padding:2rem;
+  max-width:24rem;
+  margin:2rem auto 6rem auto;
+  backdrop-filter:blur(12px);
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,0.75);
+}
+
+.contact-card a {
+  color:rgb(216,180,254);
+  display:block;
+  margin-top:.4rem;
+}
