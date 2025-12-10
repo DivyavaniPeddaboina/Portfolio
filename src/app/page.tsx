@@ -6,7 +6,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white flex flex-col">
 
       {/* HERO */}
-      <section id="home" className="hero-wrapper">
+      <section id="home" className="hero-wrapper overflow-x-hidden">
         <h1 className="hero-title animate-glow">Divyavani</h1>
 
         <p className="hero-sub">AI Enthusiast • Full-Stack Developer • Research Learner</p>
